@@ -1,0 +1,42 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title>Estadísticas</ion-title>
+    <ion-buttons slot="end">
+        <ion-button (click)="actualizarGrafico()">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+    <!-- <div class="ion-padding"> -->
+    <div>
+      
+      <ion-card class="color-chart">
+        <ion-card-header>
+          Temas más visitados
+        </ion-card-header>
+        <ion-card-content>
+            <div class="wrapper">  
+
+              <ion-slides *ngIf="!mostrarGrafico" 
+                          [options]="slidesOpts">
+                <ion-slide>
+                  <ion-label>No hay temas!</ion-label>
+                </ion-slide>
+              </ion-slides>
+
+              <canvas [ngClass]="{hiddenChart: !mostrarGrafico}"
+                      #radarCanvas 
+                      width="1000" 
+                      height="1000"></canvas>
+
+            </div>
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
+
+</ion-content>
