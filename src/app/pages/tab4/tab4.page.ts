@@ -33,19 +33,6 @@ export class Tab4Page implements OnInit {
   ngOnInit() {
 
     this.presentLoading( 'Espere...' );
-    let primer = 0;
-    let segun = 1;
-    let res;
-    console.log(primer);
-    console.log(segun);
-    for (let i = 0; i < 20; i++) {
-
-      res = primer + segun;
-      console.log(res);
-      primer = segun;
-      segun = res;
-
-    }
 
   }
 
