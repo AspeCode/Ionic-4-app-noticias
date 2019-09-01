@@ -33,7 +33,7 @@ export class Tab4Page implements OnInit {
   ngOnInit() {
 
     this.presentLoading( 'Espere...' );
-
+    
   }
 
   async presentLoading( message: string ) {
